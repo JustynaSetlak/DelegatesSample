@@ -4,8 +4,6 @@ namespace DelegatesSample
 {
     public class Calculator
     {
-        public delegate int ArithmeticDelegate(int firstNumber, int seconNumber);
-
         public double Divide(double firstNumber, double secondNumber, Func<int> error)
         {
             if (secondNumber == 0)

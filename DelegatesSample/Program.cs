@@ -4,6 +4,8 @@ namespace DelegatesSample
 {
     class Program
     {
+        delegate int ArithmeticDelegate(int firstNumber, int seconNumber);
+
         static void Main(string[] args)
         {
             var calculator = new Calculator();
@@ -14,7 +16,7 @@ namespace DelegatesSample
             });
             Console.WriteLine($" Divide: {divideResult}");
 
-            var operation = new Calculator.ArithmeticDelegate(calculator.Add);
+            var operation = new ArithmeticDelegate(calculator.Add);
             var resultOfOperation = operation(1, 3);
             Console.WriteLine($"Add: {resultOfOperation}");
 
